@@ -3,7 +3,7 @@ using namespace std;
 void merge(vector<float> &nums, int l, int m, int r){
 	vector<float> a (nums.begin() + l, nums.begin() + m + 1);
 	vector<float> b (nums.begin() + m + 1, nums.begin() + r + 1);
-	int i = 0, j = 0;
+	int i = 0, j = 0; 
 	while(i < a.size() && j < b.size()){
 		if(a[i] <= b[j]){
 			nums[l] = a[i];
@@ -14,6 +14,7 @@ void merge(vector<float> &nums, int l, int m, int r){
 		}
 		l++;
 	}
+	// sao chep phan con lai
 	while(i < a.size()){
 		nums[l] = a[i];
 		i++;
